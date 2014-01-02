@@ -311,3 +311,6 @@ function np() {
 function tre() {
 	tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX
 }
+
+#Create a password
+function mkpw() { head /dev/urandom | uuencode -m - | sed -n 2p | cut -c1-${1:-10}; }
