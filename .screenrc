@@ -6,5 +6,11 @@ hardstatus on
 hardstatus alwayslastline '%{wk}[ %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c ]%{W}'
 sorendition kw
 
+# Set a large scrollback buffer
+defscrollback 32000
+
 # hardcopydir:  The directory which contains all hardcopies.
 hardcopydir ~/.screen
+
+# Always start `screen` with UTF-8 enabled (`screen -U`)
+defutf8 on
