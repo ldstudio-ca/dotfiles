@@ -15,6 +15,10 @@ alias g="git"
 alias h="history"
 alias j="jobs"
 
+#schoolsfirst shortcut
+alias mb="cd ~/projects/mobilebanking"
+alias mbc="cd ~/projects/mbcapture"
+
 # Git Shortcuts
 alias gup="git smart-pull"
 alias gm="git smart-merge"
