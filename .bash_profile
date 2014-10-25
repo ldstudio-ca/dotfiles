@@ -46,3 +46,12 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+export PATH=/usr/local/bin:$PATH
+
+export ANDROID_HOME=/usr/local/Cellar/android-sdk/23.0.2
+
+export TF_HOME=/usr/local/lib/TEE-CLC-11.0.0
+
+export GS_UTIL=/Users/larry/Tools/gsutil
+
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$TF_HOME:$GS_UTIL
