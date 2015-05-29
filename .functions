@@ -314,3 +314,27 @@ function tre() {
 
 #Create a password
 function mkpw() { head /dev/urandom | uuencode -m - | sed -n 2p | cut -c1-${1:-10}; }
+
+function secret(){
+	openssl enc -aes-256-cbc -a -salt -in "$@" -out "$@".enc
+}
+
+function unsecret(){
+	args=("$@")
+	openssl enc -d -aes-256-cbc -a -in ${args[0]} -out ${args[1]}
+}
+
+#backup DevonThink databases
+function backupDT(){
+	rsync -r -v /Users/larry/Documents/Abby.dtBase2 /Volumes/Docs/Abby.dtBase2
+	rsync -r -v /Users/larry/Documents/Archive.dtBase2 /Volumes/Docs/Archive.dtBase2
+	rsync -r -v /Users/larry/Documents/Debts.dtBase2  /Volumes/Docs/Debts.dtBase2 
+	rsync -r -v /Users/larry/Documents/Development.dtBase2 /Volumes/Docs/Development.dtBase2
+	rsync -r -v /Users/larry/Documents/Inbox.dtBase2 /Volumes/Docs/Inbox.dtBase2
+	rsync -r -v /Users/larry/Documents/LDStudio.dtBase2 /Volumes/Docs/LDStudio.dtBase2
+	rsync -r -v /Users/larry/Documents/OtherDocs.dtBase2 /Volumes/Docs/OtherDocs.dtBase2
+	rsync -r -v /Users/larry/Documents/Personal.dtBase2 /Volumes/Docs/Personal.dtBase2
+	rsync -r -v /Users/larry/Documents/Taxes.dtBase2 /Volumes/Docs/Taxes.dtBase2
+	rsync -r -v /Users/larry/Documents/Yamaha.dtBase2 /Volumes/Docs/Yamaha.dtBase2
+}
+
