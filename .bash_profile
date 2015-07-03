@@ -1,6 +1,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH="$HOME/bin:$PATH";
 
+#Add JAVA_HOME
+export JAVA_HOME=$(/usr/libexec/java_home)
+
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
@@ -55,3 +58,5 @@ export TF_HOME=/usr/local/lib/TEE-CLC-11.0.0
 export GS_UTIL=/Users/larry/Tools/gsutil
 
 export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$TF_HOME:$GS_UTIL
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
