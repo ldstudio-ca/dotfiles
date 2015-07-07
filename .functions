@@ -338,3 +338,6 @@ function backupDT(){
 	rsync -r -v /Users/larry/Documents/Yamaha.dtBase2 /Volumes/Docs/Yamaha.dtBase2
 }
 
+function shred(){	
+	srm -rmzv "$@"
+}
